@@ -14,8 +14,13 @@ body{
     height: 100vh;
     font-family: 'Lato', sans-serif;
     font-family: 'Montserrat', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    
+    font-family: 'Roboto', sans-serif;    
+}
+
+img{
+    width: auto;
+    height: 100%;
+    border-radius: 50%;
 }
 
 .container{
@@ -29,6 +34,15 @@ body{
 header{
     height: 70px;
     display: flex;
+    background-color: #eaeaea;
+}
+
+ul{
+    list-style: none;
+}
+i{
+    color: #b1b1b1;
+    padding: 10px;
 }
 
 /* -------
@@ -38,11 +52,38 @@ header{
     width: 35%;  
   }  
 
-  .col-right, .col-otherUser{    
+  .col-right{    
     width: 65%; 
     display: flex;
     flex-direction: column;  
   }
+
+  .col-myUser, .col-otherUser{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+  }
+  .col-avatar{
+    width: calc(100% / 2);
+    display: flex;   
+  }
+  .name-myUser, .last-access{
+    margin: auto 10px;
+  }
+
+  .col-icons{
+    display: flex;
+    margin: auto 0;
+  }
+
+  .col-otherUser{
+    width: 65%; 
+  }
+
+  .last-access{
+    color: #b1b1b1;
+  }
+
 
   /* -------
     MAIN
@@ -60,7 +101,7 @@ header{
 
   .area-text{
     width: 100%;
-    height: 70%;
+    height: 70px;
     border: dashed black;
   }
 
