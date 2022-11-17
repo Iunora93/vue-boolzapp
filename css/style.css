@@ -130,8 +130,9 @@ i{
   aside{
     display: flex;
     flex-direction: column;
+    
   }
-
+  
   .search {
     display: flex;
     padding: 10px;
@@ -151,6 +152,18 @@ i{
     width: 100%;
     border: none;
     padding-left: 10px;
+  }
+
+  .column-contact{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border: red solid;
+  }
+
+  .contact{
+    height: calc(100% / 8);
+    border: blue solid;
   }
 
   /* -------
