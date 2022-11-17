@@ -225,5 +225,34 @@ i{
   }
 
   /* AREA MESSAGE */
-  
+  .container-messages{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 40px auto;
+  }
+ .col-sent{
+    margin-left: auto;
+}
+.box-green{
+    background-color: #d5f9ba;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+ .col-received{
+    text-align: left;
+    justify-content: start;
+    display: flex;
+ }
+
+ .box-white{
+    background-color: white;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+ }
+
   
