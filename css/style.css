@@ -67,7 +67,7 @@ i{
     justify-content: space-between;
   }
   .col-avatar{
-    width: calc(100% / 2);
+    width: 80%;
     display: flex;   
   }
   .name-myUser, .last-access, .text-notification{
@@ -86,6 +86,7 @@ i{
   .last-access{
     color: #b1b1b1;
   }
+  
 
 
   /* -------
@@ -130,6 +131,7 @@ i{
   aside{
     display: flex;
     flex-direction: column;
+    height: 100%;
     
   }
   
@@ -157,13 +159,42 @@ i{
   .column-contact{
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    border: red solid;
+    height: 100%;
+    overflow-y: auto;
   }
 
   .contact{
     height: calc(100% / 8);
-    border: blue solid;
+    display: flex;
+    padding: 5px 10px
+  }
+
+  .contact.col-avatar{
+    height: 100%;
+    padding: 5px;
+    width: 80%;
+  }
+
+  .last-message{
+    margin: auto 10px;
+    color: #b1b1b1;
+  }
+
+  .name-user{
+    margin: 5px 10px;
+  }
+
+  .hour small{
+    color: gray;
+    
+
+  }
+
+  .hour{
+    display: flex;
+    width: 20%;
+    padding: 5px;
+    justify-content: end;
   }
 
   /* -------
