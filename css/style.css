@@ -67,7 +67,7 @@ i{
     width: calc(100% / 2);
     display: flex;   
   }
-  .name-myUser, .last-access{
+  .name-myUser, .last-access, .text-notification{
     margin: auto 10px;
   }
 
@@ -103,6 +103,26 @@ i{
     width: 100%;
     height: 70px;
     border: dashed black;
+  }
+
+  .notification{
+    display: flex;
+    padding: 10px;
+    background-color: #8edafc;
+    padding: 25px
+  }
+
+  a{
+    color: gray;
+  }
+
+  .circle{
+    border-radius: 50%;
+    background-color: white;
+  }
+
+  .circle i{
+    color: #8edafc;
   }
 
   /* -------

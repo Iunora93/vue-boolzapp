@@ -27,7 +27,6 @@
         <!-- VueJs -->
         <div id="app" class="container">
             <header>
-
                 <div class="col-myUser debug">
                     <div class="col-avatar">
                         <img src="img/avatar_io.jpg" alt="avatar_io">
@@ -40,8 +39,7 @@
                                 <li><a href=""><i class="fa-solid fa-message"></i></a></li>
                                 <li><a href=""><i class="fa-solid fa-ellipsis-vertical"></i></a></li>
                             </ul>
-                    </div>
-                    
+                    </div>                   
                 </div>
 
                 <div class="col-otherUser debug">
@@ -64,7 +62,17 @@
             </header>
 
             <main>
-                <aside class="col-left debug"></aside>
+                <aside class="col-left debug">
+                    <div class="notification">
+                        <div class="circle">
+                            <a href="#"><i class="fa-solid fa-bell-slash"></i></a>
+                        </div>
+                        <div class="text-notification">
+                            <h4>Ricevi notifiche di nuovi messaggi</h4>
+                            <small class="active-notification"><a href="#">Attiva notifiche desktop</a></small>
+                        </div>
+                    </div>
+                </aside>
                 <div class="col-right debug">
                     <div class="area-message"></div>
                     <div class="area-text"></div>
