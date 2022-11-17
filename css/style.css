@@ -237,10 +237,11 @@ i{
 }
 .box-green{
     background-color: #d5f9ba;
-    width: fit-content;
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
 }
  .col-received{
     text-align: left;
@@ -250,9 +251,20 @@ i{
 
  .box-white{
     background-color: white;
-    width: fit-content;
     padding: 10px;
     border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
  }
+
+ .hour-message{
+    margin-left: auto;
+  }
+
+  .text-message{
+    margin-right: 80px;
+  }
+ 
 
   
