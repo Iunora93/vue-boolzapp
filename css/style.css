@@ -40,6 +40,9 @@ header{
 ul{
     list-style: none;
 }
+li{
+    list-style: none;
+}
 i{
     color: #b1b1b1;
     padding: 10px;
@@ -107,7 +110,6 @@ i{
 
   .notification{
     display: flex;
-    padding: 10px;
     background-color: #8edafc;
     padding: 25px
   }
@@ -123,6 +125,32 @@ i{
 
   .circle i{
     color: #8edafc;
+  }
+
+  aside{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .search {
+    display: flex;
+    padding: 10px;
+    background-color: #fafafa;
+  }
+
+  .search i{
+    background-color: white;
+    border-radius: 5px;
+  }
+  .fa-magnifying-glass{
+    margin-right: 5px;
+  }
+
+  .search input{
+    border-radius: 5px;
+    width: 100%;
+    border: none;
+    padding-left: 10px;
   }
 
   /* -------
