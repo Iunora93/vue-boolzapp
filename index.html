@@ -96,27 +96,11 @@
                 </aside>
                 <!-- Area message -->
                 <div class="col-right debug">
-                    <div class="area-message">
-                        <div class="container-messages">
-                            <div class="sent" v-for="message in contacts[currentContact].messages" :class="message.status"> 
-                                <div class="box-green">
-                                    <div class="text-message">
-                                        <h5>{{message.message}}</h5>
-                                    </div>
-                                    <div class="hour-message">
-                                        <small>15:00</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="received">
-                                <div class="box-white">
-                                    <div class="text-message">
-                                        <h5>Tutto fatto!</h5>
-                                    </div>
-                                    <div class="hour-message">
-                                        <small>15:00</small>
-                                    </div>
-                                </div>
+                    <div class="messages">
+                        <div class="message-container" v-for="message in contacts[currentContact].messages" :class="message.status">
+                            <div class="message">
+                                <span>{{message.message}}</span>
+                                <small>{{new Date(message.date).toLocaleTimeString('it-IT', { hour: 'numeric', minute: 'numeric' })}}</small>
                             </div>
                         </div>
                     </div>

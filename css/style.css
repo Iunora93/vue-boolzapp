@@ -97,12 +97,7 @@ i{
         height: calc(100% - 70px);
     }
 
-  .area-message{
-    width: 100%;
-    flex-grow: 1;
-    background-image: url(../img/mine.jpg);
-    overflow-y: auto;
-  }
+  
 
   .area-text{
     width: 100%;
@@ -230,46 +225,55 @@ i{
   }
 
   /* AREA MESSAGE */
-  .container-messages{
+  .messages{
     flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    margin: 40px auto;
+    background-image: url(../img/mine.jpg);
+    overflow-y: auto;
+    padding: 50px 80px;
+    
   }
- .sent{
-    margin-left: auto;
-}
-.box-green{
+
+  .messages > .message-container:not(:last-child){
+    margin-bottom: 10px;
+  }
+
+  .message-container{  
+    display: flex;
+  }
+  .message-container.sent {
+    justify-content: flex-end;
+  }
+  .message-container.sent .message{
     background-color: #d5f9ba;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-}
- .received{
-    text-align: left;
-    justify-content: start;
-    display: flex;
- }
+  }
 
- .box-white{
-    background-color: white;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
- }
-
- .hour-message{
+  .message small {
     margin-left: auto;
   }
 
-  .text-message{
-    margin-right: 80px;
+  .message span {
+    margin-right: 50px;
   }
+
+  .message{
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    min-width: 25%;
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+  }
+ 
+
+
+ 
+
+ 
+
+ 
+
+  
  
 
   
