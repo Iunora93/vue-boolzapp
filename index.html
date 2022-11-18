@@ -78,11 +78,11 @@
                     </div>
 
                     <div class="column-contact">
-                        <div class="contact">
+                        <div class="contact" v-for="contact in contacts">
                             <div class="col-avatar">
-                                <img src="img/avatar_1.jpg" alt="avatar_1">
+                                <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
                                 <div>
-                                    <h4 class="name-user">Michele</h4>
+                                    <h4 class="name-user">{{contact.name}}</h4>
                                     <small class="last-message">Ultimo messaggio inviato</small>
                                 </div>                               
                             </div>
@@ -91,90 +91,6 @@
                             </div>
                         </div>
 
-                        <div class="contact">
-                            <div class="col-avatar">
-                                <img src="img/avatar_1.jpg" alt="avatar_1">
-                                <div>
-                                    <h4 class="name-user">Michele</h4>
-                                    <small class="last-message">Ultimo messaggio inviato</small>
-                                </div>                               
-                            </div>
-                            <div class="hour">
-                                <small>12:00</small>
-                            </div>
-                        </div>
-                        <div class="contact">
-                            <div class="col-avatar">
-                                <img src="img/avatar_1.jpg" alt="avatar_1">
-                                <div>
-                                    <h4 class="name-user">Michele</h4>
-                                    <small class="last-message">Ultimo messaggio inviato</small>
-                                </div>                               
-                            </div>
-                            <div class="hour">
-                                <small>12:00</small>
-                            </div>
-                        </div>
-                        <div class="contact">
-                            <div class="col-avatar">
-                                <img src="img/avatar_1.jpg" alt="avatar_1">
-                                <div>
-                                    <h4 class="name-user">Michele</h4>
-                                    <small class="last-message">Ultimo messaggio inviato</small>
-                                </div>                               
-                            </div>
-                            <div class="hour">
-                                <small>12:00</small>
-                            </div>
-                        </div>
-                        <div class="contact">
-                            <div class="col-avatar">
-                                <img src="img/avatar_1.jpg" alt="avatar_1">
-                                <div>
-                                    <h4 class="name-user">Michele</h4>
-                                    <small class="last-message">Ultimo messaggio inviato</small>
-                                </div>                               
-                            </div>
-                            <div class="hour">
-                                <small>12:00</small>
-                            </div>
-                        </div>
-                        <div class="contact">
-                            <div class="col-avatar">
-                                <img src="img/avatar_1.jpg" alt="avatar_1">
-                                <div>
-                                    <h4 class="name-user">Michele</h4>
-                                    <small class="last-message">Ultimo messaggio inviato</small>
-                                </div>                               
-                            </div>
-                            <div class="hour">
-                                <small>12:00</small>
-                            </div>
-                        </div>
-                        <div class="contact">
-                            <div class="col-avatar">
-                                <img src="img/avatar_1.jpg" alt="avatar_1">
-                                <div>
-                                    <h4 class="name-user">Michele</h4>
-                                    <small class="last-message">Ultimo messaggio inviato</small>
-                                </div>                               
-                            </div>
-                            <div class="hour">
-                                <small>12:00</small>
-                            </div>
-                        </div>
-                        <div class="contact">
-                            <div class="col-avatar">
-                                <img src="img/avatar_1.jpg" alt="avatar_1">
-                                <div>
-                                    <h4 class="name-user">Michele</h4>
-                                    <small class="last-message">Ultimo messaggio inviato</small>
-                                </div>                               
-                            </div>
-                            <div class="hour">
-                                <small>12:00</small>
-                            </div>
-                        </div>
                     </div>
 
                 </aside>

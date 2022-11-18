@@ -101,6 +101,7 @@ i{
     width: 100%;
     flex-grow: 1;
     background-image: url(../img/mine.jpg);
+    overflow-y: auto;
   }
 
   .area-text{
