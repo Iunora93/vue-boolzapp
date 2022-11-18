@@ -83,7 +83,7 @@
                                 <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
                                 <div>
                                     <h4 class="name-user">{{contact.name}}</h4>
-                                    <small class="last-message">Ultimo messaggio inviato</small>
+                                    <small class="last-message">{{contact.messages[contact.messages.length-1].message}}</small>
                                 </div>                               
                             </div>
                             <div class="hour">
