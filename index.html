@@ -78,7 +78,7 @@
                     </div>
 
                     <div class="column-contact">
-                        <div class="contact" v-for="contact in contacts">
+                        <div class="contact" v-for="(contact, index) in contacts" :class="{ active: index === currentContact }">
                             <div class="col-avatar">
                                 <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
                                 <div>
@@ -98,25 +98,17 @@
                 <div class="col-right debug">
                     <div class="area-message">
                         <div class="container-messages">
-                            <div class="col-sent"> 
+                            <div class="sent" v-for="message in contacts[currentContact].messages" :class="message.status"> 
                                 <div class="box-green">
                                     <div class="text-message">
-                                        <h5>Hai portato a spasso il cane?</h5>
-                                    </div>
-                                    <div class="hour-message">
-                                        <small>15:00</small>
-                                    </div>
-                                </div>
-                                <div class="box-green">
-                                    <div class="text-message">
-                                        <h5>Ricordati di stendere i panni</h5>
+                                        <h5>{{message.message}}</h5>
                                     </div>
                                     <div class="hour-message">
                                         <small>15:00</small>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-received">
+                            <div class="received">
                                 <div class="box-white">
                                     <div class="text-message">
                                         <h5>Tutto fatto!</h5>

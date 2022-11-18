@@ -192,9 +192,13 @@ i{
   }
 
   .contact{
-    height: calc(100% / 8);
+    height: 60px;
     display: flex;
     padding: 5px 10px
+  }
+
+  .contact.active{
+    background-color: lightgray;
   }
 
   .contact.col-avatar{
@@ -233,7 +237,7 @@ i{
     width: 70%;
     margin: 40px auto;
   }
- .col-sent{
+ .sent{
     margin-left: auto;
 }
 .box-green{
@@ -244,7 +248,7 @@ i{
     display: flex;
     flex-direction: column;
 }
- .col-received{
+ .received{
     text-align: left;
     justify-content: start;
     display: flex;
