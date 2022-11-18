@@ -44,10 +44,10 @@
 
                 <div class="col-otherUser debug">
                     <div class="col-avatar">
-                        <img src="img/avatar_1.jpg" alt="avatar_1">
+                        <img :src="`img/avatar${contacts[currentContact].avatar}.jpg`" alt="avatar_1">
                         <div>
-                            <h4 class="name-myUser">Michele</h4>
-                            <small class="last-access">Ultimo accesso oggi alle 12:00</small>
+                            <h4 class="name-myUser">{{contacts[currentContact].name}}</h4>
+                            <small class="last-access">Ultimo accesso oggi alle {{new Date(contacts[currentContact].messages[contacts[currentContact].messages.length-1].date).toLocaleTimeString('it-IT', { hour: 'numeric', minute: 'numeric' })}}</small>
                         </div>
                     </div>
 
@@ -74,11 +74,11 @@
                     </div>
                     <div class="search">
                         <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                        <input type="text" @submit.prevent placeholder="Cerca o inizia una nuova chat">
+                        <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="checkWord" @keyup="checkName">
                     </div>
 
                     <div class="column-contact">
-                        <div class="contact" @click="clickContact (index)" v-for="(contact, index) in contacts" :class="{ active: index === currentContact }">
+                        <div class="contact" @click="clickContact (index)" v-for="(contact, index) in contacts" :class="{ active: index === currentContact }" v-show="contact.visible">
                             <div class="col-avatar">
                                 <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
                                 <div>
@@ -109,7 +109,9 @@
                             <a href="#"><i class="fa-regular fa-face-smile"></i></a>
                         </div>
                         <div class="col-center">
-                            <input type="text" @submit.prevent placeholder="Scrivi un messaggio">
+                            
+                                <input type="text" placeholder="Scrivi un messaggio" v-model="addText" @keyup.enter="newMessage">
+                            
                         </div>
                         <div class="col-small">
                             <a href="#"><i class="fa-solid fa-microphone"></i></a>

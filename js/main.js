@@ -3,6 +3,8 @@ const { createApp } = Vue
 createApp({
     data() {
       return {
+        checkWord: '',
+        addText: '',
         currentContact: 0,
         contacts: [
             {
@@ -179,6 +181,35 @@ createApp({
     methods:{       
         clickContact (index){
             this.currentContact = index;
+        },
+        newMessage(){
+            const newText = {
+                date: new Date(),
+                message: this.addText,
+                status: 'sent'
+            }
+            this.contacts[this.currentContact].messages.push(newText);
+            this.addText = '';
+            setTimeout(()=>{
+                const newReceived = {
+                    date: new Date(),
+                    message: 'Ok!',
+                    status: 'received'
+                }
+                this.contacts[this.currentContact].messages.push(newReceived);
+            },1000)
+        },
+        checkName(){
+            this.contacts.forEach(element => {
+                if(this.checkWord.length === 0 ){
+                    element.visible = true;
+                }
+                else if(element.name.toUpperCase().includes(this.checkWord.toUpperCase())){
+                    element.visible = true;
+                } else {
+                    element.visible = false;
+                }
+            });           
         }
     }
 }).mount('#app')
