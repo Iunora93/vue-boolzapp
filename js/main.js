@@ -175,5 +175,10 @@ createApp({
             }
         ]
       }
+    },
+    methods:{       
+        clickContact (index){
+            this.currentContact = index;
+        }
     }
 }).mount('#app')

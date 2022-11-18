@@ -78,7 +78,7 @@
                     </div>
 
                     <div class="column-contact">
-                        <div class="contact" v-for="(contact, index) in contacts" :class="{ active: index === currentContact }">
+                        <div class="contact" @click="clickContact (index)" v-for="(contact, index) in contacts" :class="{ active: index === currentContact }">
                             <div class="col-avatar">
                                 <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
                                 <div>
