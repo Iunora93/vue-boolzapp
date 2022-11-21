@@ -86,8 +86,8 @@
                                     <small class="last-message">{{contact.messages[contact.messages.length-1].message}}</small>
                                 </div>                               
                             </div>
-                            <div class="hour">
-                                <small>12:00</small>
+                            <div class="hour" v-show="contact.visible">
+                                <small>{{new Date(contacts[currentContact].messages[contacts[currentContact].messages.length-1].date).toLocaleTimeString('it-IT', { hour: 'numeric', minute: 'numeric' })}}</small>
                             </div>
                         </div>
 
